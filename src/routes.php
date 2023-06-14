@@ -1,7 +1,6 @@
 <?php
 
-/** @var \Illuminate\Routing\Route $route */
-$route = Route::get(
+$route = \Illuminate\Support\Facades\Route::get(
     config('prometheus.metrics_route_path'),
     \Mcoirault\LaravelPrometheusExporter\MetricsController::class . '@getMetrics'
 );
